@@ -1,0 +1,16 @@
+﻿<Page x:Class="converter_money.Load"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:converter_money"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Load">
+
+    <Grid>
+        <Viewbox x:Name="Loader" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center" Loaded="Loader_Loaded">
+            <local:StartVal />
+        </Viewbox>
+    </Grid>
+</Page>
