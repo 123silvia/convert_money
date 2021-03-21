@@ -7,9 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid VerticalAlignment="Center">
-        <TextBox x:Name="convertSum" HorizontalAlignment="Center" Margin="0,33,0,0" Text="0.0" MaxLength="30" TextWrapping="Wrap" BorderThickness="0" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontFamily="Times New Roman" FontSize="24" Background="White" FontWeight="Bold" PreviewTextInput="textBoxConvert1_PreviewTextInput" TextChanged="textBoxConvert1_TextChanged"/>
+        <TextBox x:Name="convertSum" HorizontalAlignment="Center" Margin="0,33,0,0" Text="0.0" MaxLength="30" TextWrapping="Wrap" BorderThickness="0" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontFamily="Times New Roman" FontSize="24" Background="White" FontWeight="Bold" PreviewTextInput="textBoxConvert1_PreviewTextInput" TextChanged="OntextBoxConvert1_TextChanged"/>
         <Label x:Name="convertName" Content="Label" HorizontalAlignment="Center" Margin="0,131,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24" RenderTransformOrigin="1.594,0.257" FontWeight="Bold" />
-        <Button HorizontalAlignment="Center" Margin="0,229,0,0" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="20" BorderThickness="0" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Center" Margin="0,229,0,0" VerticalAlignment="Top" Width="200" FontFamily="Times New Roman" FontSize="20" BorderThickness="0" Background="White" Click="OnButton_Click">
             <TextBlock TextAlignment="Center" Foreground="#FF008CFF" FontWeight="Bold"> Изменить <LineBreak/> валюту</TextBlock>
         </Button>
     </Grid>

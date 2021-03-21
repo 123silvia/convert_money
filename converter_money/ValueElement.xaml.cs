@@ -19,32 +19,33 @@ namespace PI.ConvertMoneyOther
     public partial class ValueElement : UserControl
     {
         public event RoutedEventHandler ConvertButtonClick;
-        public event RoutedEventHandler TextChangedtextbooks;
+        public event RoutedEventHandler TextChangedConvertSum;
         public ValueElement()
         {
             InitializeComponent();
             
         }
         
-        private void Button_Click(object sender, RoutedEventArgs e)
+        protected virtual void OnButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ConvertButtonClick != null) ConvertButtonClick(sender, e);
+            if (ConvertButtonClick != null) 
+                ConvertButtonClick(sender, e);
 
         }
 
         private void textBoxConvert1_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (!(Char.IsDigit(e.Text, 0) || (e.Text == ".")
-               && (!convertSum.Text.Contains(".")
+            if (!(Char.IsDigit(e.Text, 0) || (e.Text == ".") && (!convertSum.Text.Contains(".")
                 && convertSum.Text.Length != 0)))
-             {
+            {
                  e.Handled = true;
-             }
+            }
         }
 
-        private void textBoxConvert1_TextChanged(object sender, TextChangedEventArgs e)
+        protected virtual void OntextBoxConvert1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (TextChangedtextbooks != null) TextChangedtextbooks(sender, e);
+            if (TextChangedConvertSum != null) 
+                TextChangedConvertSum(sender, e);
         }
     }
 }

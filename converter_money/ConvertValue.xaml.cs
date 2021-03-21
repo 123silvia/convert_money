@@ -23,7 +23,7 @@ namespace PI.ConvertMoneyOther
             Application.Current.MainWindow.Title = "Конвертер валют";
             InitializeComponent();
             ConvertingMoney[] inputs = ParsingJson.ListConvertMoney.GetRange(0, 2).ToArray();
-            if (ConvertingValuesMoney.checkButton1 != true && ConvertingValuesMoney.Convert1Text==null)
+            if (ConvertingValuesMoney.СheckButton1 != true && ConvertingValuesMoney.Convert1Text == null)
             {
                 ValueElement1.convertName.Content= inputs[0].IdMoney;
                 ConvertingValuesMoney.Convert1Text = inputs[0].IdMoney;
@@ -38,7 +38,8 @@ namespace PI.ConvertMoneyOther
                 string dataText = ValueElement1.convertSum.Text;
                 ValueElement2.convertSum.Text = ConvertingValuesMoney.Convert1Convert2(dataText);
             }
-            if (ConvertingValuesMoney.checkButton2 != true && ConvertingValuesMoney.Convert2Text==null)
+
+            if (ConvertingValuesMoney.СheckButton2 != true && ConvertingValuesMoney.Convert2Text  ==  null)
             {
                 ValueElement2.convertName.Content= inputs[1].IdMoney;
                 ConvertingValuesMoney.Convert2Text = inputs[1].IdMoney;
@@ -48,7 +49,7 @@ namespace PI.ConvertMoneyOther
             else
             {
                 ValueElement2.convertName.Content = ConvertingValuesMoney.Convert2Text;
-                ValueElement2.convertSum.Text =ConvertingValuesMoney.PrintSum2;
+                ValueElement2.convertSum.Text = ConvertingValuesMoney.PrintSum2;
                 string dataText = ValueElement1.convertSum.Text;
                 ValueElement2.convertSum.Text = ConvertingValuesMoney.Convert1Convert2(dataText);
             }
@@ -57,8 +58,8 @@ namespace PI.ConvertMoneyOther
 
         private void ConvertButtonClick1(object sender, RoutedEventArgs e)
         {
-            ConvertingValuesMoney.checkButton1 = true;
-            ConvertingValuesMoney.checkButton2 = false;
+            ConvertingValuesMoney.СheckButton1 = true;
+            ConvertingValuesMoney.СheckButton2 = false;
             ConvertingValuesMoney.PrintSum1 = ValueElement1.convertSum.Text;
             ConvertingValuesMoney.PrintSum2 = ValueElement2.convertSum.Text;
             this.NavigationService.Navigate(new Uri("SelectConverter.xaml", UriKind.Relative));
@@ -66,19 +67,19 @@ namespace PI.ConvertMoneyOther
 
         private void ConvertButtonClick2(object sender, RoutedEventArgs e)
         {
-            ConvertingValuesMoney.checkButton1 = false;
-            ConvertingValuesMoney.checkButton2 = true;
+            ConvertingValuesMoney.СheckButton1 = false;
+            ConvertingValuesMoney.СheckButton2 = true;
             ConvertingValuesMoney.PrintSum1 = ValueElement1.convertSum.Text;
             ConvertingValuesMoney.PrintSum2 = ValueElement2.convertSum.Text;
             this.NavigationService.Navigate(new Uri("SelectConverter.xaml", UriKind.Relative));
         }
-        private void TextChangedtextboks1(object sender, RoutedEventArgs e)
+        private void TextChangedConvertSum1(object sender, RoutedEventArgs e)
         {
             string dataText = ValueElement1.convertSum.Text;
-            if (ValueElement1.convertSum.IsFocused==true)
+            if (ValueElement1.convertSum.IsFocused  ==  true)
                 ValueElement2.convertSum.Text = ConvertingValuesMoney.Convert1Convert2(dataText);
         }
-        private void TextChangedtextboks2(object sender, RoutedEventArgs e)
+        private void TextChangedConvertSum2(object sender, RoutedEventArgs e)
         {
 
             string dataText = ValueElement2.convertSum.Text;

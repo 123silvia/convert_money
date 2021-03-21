@@ -7,6 +7,10 @@ namespace PI.ConvertMoneyOther
 {
     class ParsingWebClient
     {
+        /// <summary>
+        /// Прооизводим подключение и парсинг данных о валютах
+        /// </summary>
+        /// <param name="urlText">ссылка на интернет ресурс, с которого берутся данные</param>
         private void ConnectParse(string urlText)
         {
             using (var webClient = new System.Net.WebClient())
@@ -16,6 +20,11 @@ namespace PI.ConvertMoneyOther
                 parseJson.GetDataParseJson(resultJsonString);
             }
         }
+        /// <summary>
+        /// Производим автоматическое подключение к интернет-ресурсу
+        /// </summary>
+        /// <param name="urlText">ссылка на интернет ресурс</param>
+        /// <returns></returns>
         public bool ConnectionToParse(string urlText)
         {
             try

@@ -33,7 +33,8 @@ namespace PI.ConvertMoneyOther
             bool result = webClient.ConnectionToParse(urlText);
             while (!result)
             {
-                MessageBox.Show("Нет соединения с интернетом, проверьте свое соединение", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Нет соединения с интернетом, проверьте свое соединение", 
+                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 result = webClient.ConnectionToParse(urlText);
             }
             Task.Delay(2000).Wait();

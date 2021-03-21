@@ -9,11 +9,11 @@
       Title="Convert" WindowTitle="Выбор валюты">
     <Grid>
         <Viewbox Height="300" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <local:ValueElement x:Name="ValueElement1"  Margin="100,0,0,0" ConvertButtonClick="ConvertButtonClick1" TextChangedtextbooks="TextChangedtextboks1"/>
+            <local:ValueElement x:Name="ValueElement1"  Margin="100,0,0,0" ConvertButtonClick="ConvertButtonClick1" TextChangedConvertSum="TextChangedConvertSum1"/>
         </Viewbox>
         <Image HorizontalAlignment="Left" Height="40" Margin="298,110,0,0" Source="picture.png" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.401,1.027"/>
         <Viewbox HorizontalAlignment="Right" VerticalAlignment="Top" Height="300" Width="400">
-            <local:ValueElement x:Name="ValueElement2" Margin="0,0,100,0" ConvertButtonClick="ConvertButtonClick2" TextChangedtextbooks="TextChangedtextboks2"/>
+            <local:ValueElement x:Name="ValueElement2" Margin="0,0,100,0" ConvertButtonClick="ConvertButtonClick2" TextChangedConvertSum="TextChangedConvertSum2"/>
         </Viewbox>
         <Button HorizontalAlignment="Left" Margin="274,333,0,0" VerticalAlignment="Top" Width="228" FontFamily="Times New Roman" FontSize="24" BorderThickness="0" Background="#afeeee" Height="85" Click="ButtonClick">
             <TextBlock TextAlignment="Center" Foreground="#FF008CFF" FontWeight="Bold"> Перестановка <LineBreak/> валют </TextBlock>
