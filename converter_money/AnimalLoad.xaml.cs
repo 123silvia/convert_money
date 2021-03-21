@@ -11,11 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
-    /// <summary>
-    /// Логика взаимодействия для StarVal.xaml
-    /// </summary>
     public partial class AnimalLoad : UserControl
     {
         public AnimalLoad()

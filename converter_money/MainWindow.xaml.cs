@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,7 +28,7 @@ namespace converter_money
         }
         private void loadPaseJson(object o, DoWorkEventArgs args)
         {
-            WebClient webClient = new WebClient();
+            ParsingWebClient webClient = new ParsingWebClient();
             string urlText = "https://www.cbr-xml-daily.ru/daily_json.js";
             bool result = webClient.ConnectionToParse(urlText);
             while (!result)
@@ -46,7 +46,7 @@ namespace converter_money
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Load());
+            mainFrame.Navigate(new LoadAnimals());
             BackgroundWorker workerLoaded = new BackgroundWorker();
             workerLoaded.DoWork += loadPaseJson;
             workerLoaded.RunWorkerCompleted += OnRunWorkerCompleted;

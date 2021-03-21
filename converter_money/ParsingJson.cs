@@ -5,12 +5,12 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
-    class ParseJson
+    class ParsingJson
     {
-        static private List<ConvertMoney> listConvertMoney = new List<ConvertMoney>();
-        static internal List<ConvertMoney> ListConvertMoney { get => listConvertMoney; set => listConvertMoney = value; }
+        static private List<ConvertingMoney> _listConvertMoney = new List<ConvertingMoney>();
+        static internal List<ConvertingMoney> ListConvertMoney { get => _listConvertMoney; set => _listConvertMoney = value; }
         public void GetDataParseJson(string resultJsonString)
         {
             JObject resultData = JObject.Parse(resultJsonString);
@@ -21,7 +21,7 @@ namespace converter_money
                 string valueName = System.Convert.ToString(res.Value["Name"]);
                 double valueVal = System.Convert.ToDouble(res.Value["Value"]);
                 double nominalValue = System.Convert.ToDouble(res.Value["Nominal"]);
-                ListConvertMoney.Add(new ConvertMoney(valueId, valueName, valueVal, nominalValue));
+                ListConvertMoney.Add(new ConvertingMoney(valueId, valueName, valueVal, nominalValue));
             }
         }
     }

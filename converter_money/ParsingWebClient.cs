@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
-    class WebClient
+    class ParsingWebClient
     {
         private void ConnectParse(string urlText)
         {
             using (var webClient = new System.Net.WebClient())
             {
                 string resultJsonString = webClient.DownloadString(urlText);
-                ParseJson parseJson = new ParseJson();
+                ParsingJson parseJson = new ParsingJson();
                 parseJson.GetDataParseJson(resultJsonString);
             }
         }

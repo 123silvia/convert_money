@@ -15,14 +15,12 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
-    /// <summary>
-    /// Логика взаимодействия для Load.xaml
-    /// </summary>
-    public partial class Load : Page
+
+    public partial class LoadAnimals : Page
     {
-        public Load()
+        public LoadAnimals()
         {
             InitializeComponent();
         }

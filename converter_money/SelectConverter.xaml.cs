@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
     /// <summary>
     /// Логика взаимодействия для SelectConverter.xaml
@@ -22,27 +22,27 @@ namespace converter_money
         {
             InitializeComponent();
             Application.Current.MainWindow.Title = "Выбор валют";
-            foreach (ConvertMoney valueMoney in ParseJson.ListConvertMoney)
+            foreach (ConvertingMoney valueMoney in ParsingJson.ListConvertMoney)
             {
-                if (ConvertValuesMoney.checkButton1 == true && ConvertValuesMoney.Convert2Text != valueMoney.IdMoney)
+                if (ConvertingValuesMoney.checkButton1 == true && ConvertingValuesMoney.Convert2Text != valueMoney.IdMoney)
                 {
                     RadioButton radioButtons = new RadioButton() { Content = valueMoney.NameMoney + " " + valueMoney.IdMoney, Name = valueMoney.IdMoney, GroupName = valueMoney.ValueMoney.ToString(), Tag=valueMoney.NominalMoney, FontFamily= new FontFamily("Time New Roman"), FontSize = 24 };
                     radioButtons.Click += delegate (object sender, RoutedEventArgs e)
                     {
-                        ConvertValuesMoney.Convert1Text = radioButtons.Name;
-                        ConvertValuesMoney.Convert1Value = System.Convert.ToDouble(radioButtons.GroupName);
-                        ConvertValuesMoney.Convert1Nominal = System.Convert.ToDouble(radioButtons.Tag);
+                        ConvertingValuesMoney.Convert1Text = radioButtons.Name;
+                        ConvertingValuesMoney.Convert1Value = System.Convert.ToDouble(radioButtons.GroupName);
+                        ConvertingValuesMoney.Convert1Nominal = System.Convert.ToDouble(radioButtons.Tag);
                         this.NavigationService.Navigate(new Uri("ConvertValue.xaml", UriKind.Relative));
                     };
                     MyStackPanel.Children.Add(radioButtons);
-                } else if(ConvertValuesMoney.checkButton2 == true && ConvertValuesMoney.Convert1Text != valueMoney.IdMoney)
+                } else if(ConvertingValuesMoney.checkButton2 == true && ConvertingValuesMoney.Convert1Text != valueMoney.IdMoney)
                 {
                     RadioButton radioButtons = new RadioButton() { Content = valueMoney.NameMoney + " " + valueMoney.IdMoney, Name = valueMoney.IdMoney, GroupName = valueMoney.ValueMoney.ToString(), Tag = valueMoney.NominalMoney, FontFamily = new FontFamily("Time New Roman"), FontSize = 24 };
                     radioButtons.Click += delegate (object sender, RoutedEventArgs e)
                     {
-                        ConvertValuesMoney.Convert2Text = radioButtons.Name;
-                        ConvertValuesMoney.Convert2Value = System.Convert.ToDouble(radioButtons.GroupName);
-                        ConvertValuesMoney.Convert2Nominal = System.Convert.ToDouble(radioButtons.Tag);
+                        ConvertingValuesMoney.Convert2Text = radioButtons.Name;
+                        ConvertingValuesMoney.Convert2Value = System.Convert.ToDouble(radioButtons.GroupName);
+                        ConvertingValuesMoney.Convert2Nominal = System.Convert.ToDouble(radioButtons.Tag);
                         this.NavigationService.Navigate(new Uri("ConvertValue.xaml", UriKind.Relative));
                     };
                     MyStackPanel.Children.Add(radioButtons);

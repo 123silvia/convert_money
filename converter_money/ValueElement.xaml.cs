@@ -13,11 +13,9 @@ using System.Windows.Shapes;
 using System.Threading;
 using System.Globalization;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
-    /// <summary>
-    /// Логика взаимодействия для val_element.xaml
-    /// </summary>
+
     public partial class ValueElement : UserControl
     {
         public event RoutedEventHandler ConvertButtonClick;

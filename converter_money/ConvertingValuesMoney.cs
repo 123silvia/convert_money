@@ -4,28 +4,34 @@ using System.Text;
 using System.Threading;
 using System.Globalization;
 
-namespace converter_money
+namespace PI.ConvertMoneyOther
 {
-    class ConvertValuesMoney
+    class ConvertingValuesMoney
     {
-        static private double convert1Value;
-        static private double convert2Value;
-        static private string convert1Text;
-        static private string convert2Text;
-        static private double convert1Nominal;
-        static private double convert2Nominal;
+        static private double _convert1Value;
+        static private double _convert2Value;
+        static private string _convert1Text;
+        static private string _convert2Text;
+        static private double _convert1Nominal;
+        static private double _convert2Nominal;
+        /// <summary>
+        /// кнопка вызова смены валюты для одного поля-валюты
+        /// </summary>
         static public bool checkButton1 = false;
+        /// <summary>
+        /// кнопка вызова смены валюты для другого поля-валюты
+        /// </summary>
         static public bool checkButton2 = false;
-        static private string printSum1;
-        static private string printSum2;
-        static public double Convert1Value { get => convert1Value; set => convert1Value = value; }
-        static public double Convert2Value { get => convert2Value; set => convert2Value = value; }
-        static public string Convert1Text { get => convert1Text; set => convert1Text = value; }
-        static public string Convert2Text { get => convert2Text; set => convert2Text = value; }
-        static public double Convert1Nominal { get => convert1Nominal; set => convert1Nominal = value; }
-        static public double Convert2Nominal { get => convert2Nominal; set => convert2Nominal = value; }
-        static public string PrintSum1 { get => printSum1; set => printSum1 = value; }
-        static public string PrintSum2 { get => printSum2; set => printSum2 = value; }
+        static private string _printSum1;
+        static private string _printSum2;
+        static public double Convert1Value { get => _convert1Value; set => _convert1Value = value; }
+        static public double Convert2Value { get => _convert2Value; set => _convert2Value = value; }
+        static public string Convert1Text { get => _convert1Text; set => _convert1Text = value; }
+        static public string Convert2Text { get => _convert2Text; set => _convert2Text = value; }
+        static public double Convert1Nominal { get => _convert1Nominal; set => _convert1Nominal = value; }
+        static public double Convert2Nominal { get => _convert2Nominal; set => _convert2Nominal = value; }
+        static public string PrintSum1 { get => _printSum1; set => _printSum1 = value; }
+        static public string PrintSum2 { get => _printSum2; set => _printSum2 = value; }
         static private bool isInteger(String s)
         {
             try
