@@ -6,26 +6,24 @@ namespace converter_money
 {
     public class ConvertMoney
     {
-        private string name;
-        private double value_f;
-        private string id_f;
-        public string Name { get => name; set => name = value; }
-        public double Value { get => value_f; set => value_f=value; }
-        public string Id { get => id_f; set=> id_f=value; }
-        public ConvertMoney(string id_f, string name, double value_f)
+        private string nameMoney;
+        private double valueMoney;
+        private string idMoney;
+        private double nominalMoney;
+        public string NameMoney { get => nameMoney; set => nameMoney = value; }
+        public double ValueMoney { get => valueMoney; set => valueMoney=value; }
+        public string IdMoney { get => idMoney; set=> idMoney=value; }
+        public double NominalMoney { get => nominalMoney; set => nominalMoney = value; }
+        public ConvertMoney(string idMoney, string nameMoney, double valueMoney, double nominalMoney)
         {
-            this.Id = id_f;
-            this.Name = name;
-            this.Value = value_f;
-        }
-        public ConvertMoney(string id_f, string name)
-        {
-            this.Name = name;
-            this.Id = id_f;
+            this.IdMoney = idMoney;
+            this.NameMoney = nameMoney;
+            this.ValueMoney = valueMoney;
+            this.NominalMoney = nominalMoney;
         }
         public string toString()
         {
-            return "ID: " + this.id_f + "; Name: " + this.name + "; Value: " + this.value_f;
+            return "ID: " + this.idMoney + "; Name: " + this.nameMoney + "; Value: " + this.valueMoney +"; Nominal: " + nominalMoney;
         }
     }
 }

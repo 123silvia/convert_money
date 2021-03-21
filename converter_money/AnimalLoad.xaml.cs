@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace converter_money
 {
     /// <summary>
-    /// Логика взаимодействия для StartVal.xaml
+    /// Логика взаимодействия для StarVal.xaml
     /// </summary>
-    public partial class StartVal : UserControl
+    public partial class AnimalLoad : UserControl
     {
-        public StartVal()
+        public AnimalLoad()
         {
             InitializeComponent();
         }
